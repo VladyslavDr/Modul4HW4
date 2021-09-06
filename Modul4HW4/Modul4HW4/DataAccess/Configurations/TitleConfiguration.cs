@@ -16,6 +16,32 @@ namespace Modul4HW4.DataAccess.Configurations
             builder.ToTable("Title").HasKey(p => p.TitleId);
             builder.Property(p => p.TitleId).HasColumnName("TitleId").IsRequired();
             builder.Property(p => p.Name).HasColumnName("Name").HasMaxLength(50).IsRequired();
+            builder.HasData(
+                new Title()
+                {
+                    Name = "name1",
+                    TitleId = 1
+                },
+                new Title()
+                {
+                    Name = "name2",
+                    TitleId = 2
+                },
+                new Title()
+                {
+                    Name = "name3",
+                    TitleId = 3
+                },
+                new Title()
+                {
+                    Name = "name4",
+                    TitleId = 4
+                },
+                new Title()
+                {
+                    Name = "name5",
+                    TitleId = 5
+                });
         }
     }
 }

@@ -25,6 +25,42 @@ namespace Modul4HW4.DataAccess.Configurations
                 .WithMany(p => p.EmployeeProjects)
                 .HasForeignKey(d => d.EmployeeId)
                 .OnDelete(DeleteBehavior.Cascade);
+            builder.HasData(
+            new EmployeeProject()
+            {
+                EmployeeProjectId = 1,
+                ProjectId = 1,
+                EmployeeId = 1,
+                Rate = 5
+            },
+            new EmployeeProject()
+            {
+                EmployeeProjectId = 2,
+                ProjectId = 2,
+                EmployeeId = 2,
+                Rate = 2
+            },
+            new EmployeeProject()
+            {
+                EmployeeProjectId = 3,
+                ProjectId = 3,
+                EmployeeId = 3,
+                Rate = 3
+            },
+            new EmployeeProject()
+            {
+                EmployeeProjectId = 4,
+                ProjectId = 4,
+                EmployeeId = 4,
+                Rate = 4
+            },
+            new EmployeeProject()
+            {
+                EmployeeProjectId = 5,
+                ProjectId = 5,
+                EmployeeId = 5,
+                Rate = 5
+            });
         }
     }
 }

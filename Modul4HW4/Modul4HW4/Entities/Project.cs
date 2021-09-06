@@ -13,5 +13,8 @@ namespace Modul4HW4.Entities
         public decimal BudGet { get; set; }
         public DateTime StartedDate { get; set; }
         public List<EmployeeProject> EmployeeProjects { get; set; } = new List<EmployeeProject>();
+
+        public int ClientId { get; set; }
+        public Client Client { get; set; }
     }
 }
